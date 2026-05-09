@@ -14,7 +14,7 @@ Inspired by the “Four Treasures of the Study” (文房四宝), Modian separat
 
 # Architecture Overview
 
-![Modian Architecture](assets/Modian%20Architecture%20V1.0.png)
+![Modian Architecture](assets/Modian%20Architecture%20V1.1.0.png)
 *(Modian V1.0 Clean Architecture)*
 
 Modian decouples the IME into four independent cooperating components:
