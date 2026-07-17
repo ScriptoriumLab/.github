@@ -2,7 +2,7 @@
 
 > “Architecture is about the important stuff. Whatever that is.” — Ralph Johnson
 >
-> Modian’s architecture was not built in a day. It evolved organically—driven by a deeper understanding of Windows TSF, an obsession with stability, and the need for cross-platform reusability.
+> Scriptorium’s architecture was not built in a day. It evolved organically—driven by a deeper understanding of Windows TSF, an obsession with stability, and the need for cross-platform reusability.
 
 ## Phase 1: The Monolithic Era
 
@@ -11,10 +11,10 @@
 In the early stage of the project, the primary goal was to validate TSF (Text Services Framework) feasibility — simply **“getting text input working in Notepad.”** The architecture at this point was a classic in-process monolithic DLL.
 
 ![Architecture V0.1](assets/Modian%20Architecture%20V0.1.png)
-*(Modian V0.1)*
+*(Scriptorium V0.1)*
 
 ![Architecture V0.1.1](assets/Modian%20Architecture%20V0.1.1.png)
-*(Modian V0.1.1)*
+*(Scriptorium V0.1.1)*
 
 ### Key Characteristics
 
@@ -35,10 +35,10 @@ In the early stage of the project, the primary goal was to validate TSF (Text Se
 To improve maintainability, a layered architecture was introduced. The goal was to separate OS-specific complexity from core business logic.
 
 ![Architecture V0.1.2](assets/Modian%20Architecture%20V0.1.2.png)
-*(Modian V0.1.2)*
+*(Scriptorium V0.1.2)*
 
 ![Architecture V0.1.3](assets/Modian%20Architecture%20V0.1.3.png)
-*(Modian V0.1.3)*
+*(Scriptorium V0.1.3)*
 
 ### Key Changes
 
@@ -59,12 +59,12 @@ As development progressed, layering alone could not solve stability issues. Proc
 The architecture evolved from a monolithic DLL into a **Client–Server model**.
 
 ![Architecture V1.0 IPC](assets/Modian%20Architecture%20V1.0%20Draft.png)
-*(Modian V1.0 Draft)*
+*(Scriptorium V1.0 Draft)*
 
 ### Key Changes
 
-- **Modian-Brush (Client)**: Lightweight DLL running inside host process
-- **Modian-Inkstone (Server)**: Core logic moved to standalone background process
+- **Scriptorium-Brush (Client)**: Lightweight DLL running inside host process
+- **Scriptorium-Inkstone (Server)**: Core logic moved to standalone background process
 - **IPC Communication**: Named Pipes introduced for inter-process communication
 
 ### Benefits
@@ -86,7 +86,7 @@ Heavy dictionary loading and processing moved off UI thread.
 After establishing the multi-process model, dependencies were reorganized to follow the **Dependency Rule**.
 
 ![Clean Architecture V1.0](assets/Modian%20Architecture%20V1.0.png)
-*(Modian V1.0)*
+*(Scriptorium V1.0)*
 
 ### Final Structure
 
@@ -119,11 +119,11 @@ After introducing the multi-process architecture, the IME core logic was moved o
 5. Risk of UI and core state inconsistency
 
 ![Clean Architecture V1.1.0](assets/Modian%20Architecture%20V1.1.0.png)
-*(Modian V1.1.0)*
+*(Scriptorium V1.1.0)*
 
 ### Key Changes
 
-We further split the UI into an independent process: Modian-Ink
+We further split the UI into an independent process: Scriptorium-Ink
 - UI runs as a separate process
 - Core server becomes single source of truth
 - UI becomes stateless renderer
@@ -166,7 +166,7 @@ Allows using modern web-based UI frameworks.
 
 ## Summary
 
-From **V0.1** to **V1.0**, Modian demonstrates a key principle:
+From **V0.1** to **V1.0**, Scriptorium demonstrates a key principle:
 
 > Good architecture evolves; it is not designed upfront.
 
