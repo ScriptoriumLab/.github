@@ -1,6 +1,6 @@
-# Modian IME
+# Scriptorium IME
 
-Modian is a modern, decoupled, cross-platform Chinese Input Method Editor (IME) framework.
+Scriptorium is a modern, decoupled, cross-platform Chinese Input Method Editor (IME) framework.
 
 It explores how system-level software such as IMEs can be designed using Clean Architecture and Multi-Process Design, addressing common issues in traditional IME implementations:
 - Tight coupling between OS APIs and core logic
@@ -8,18 +8,18 @@ It explores how system-level software such as IMEs can be designed using Clean A
 - Crash propagation to host applications
 - Hard-to-extend engine architecture
 
-Inspired by the “Four Treasures of the Study” (文房四宝), Modian separates responsibilities into independent components while keeping the core logic portable.
+Inspired by the “Four Treasures of the Study” (文房四宝), Scriptorium separates responsibilities into independent components while keeping the core logic portable.
 
 👉 See [Architecture Evolution](ARCHITECTURE_EVOLUTION.md).
 
 # Architecture Overview
 
 ![Modian Architecture](assets/Modian%20Architecture%20V1.1.0.png)
-*(Modian V1.0 Clean Architecture)*
+*(Scriptorium V1.0 Clean Architecture)*
 
-Modian decouples the IME into four independent cooperating components:
+Scriptorium decouples the IME into four independent cooperating components:
 
-## Modian-Brush (The Pen)
+## Scriptorium-Brush (The Pen)
 
 **OS Driver / Adapter**
 
@@ -32,7 +32,7 @@ OS-specific thin client designed for minimal logic and crash isolation.
 Stack
 C++23, Windows TSF (planned macOS IMK)
 
-## Modian-Inkstone (The Inkstone)
+## Scriptorium-Inkstone (The Inkstone)
 
 **Core Logic Server**
 
@@ -45,7 +45,7 @@ Single source of truth. Runs as background service to isolate failures from host
 Stack
 C++23, IPC (Named Pipes)
 
-## Modian-Inkstick (The Inkstick)
+## Scriptorium-Inkstick (The Inkstick)
 
 **Engine Plugins (Planned)**
 
@@ -58,7 +58,7 @@ Pluggable architecture enabling independent engine development.
 Stack
 C ABI plugin interface (planned)
 
-## Modian-Ink (The Ink)
+## Scriptorium-Ink (The Ink)
 
 **Stateless UI Renderer**
 
