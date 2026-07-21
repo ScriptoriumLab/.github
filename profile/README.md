@@ -14,7 +14,7 @@ Inspired by the “Four Treasures of the Study” (文房四宝), Scriptorium se
 
 # Architecture Overview
 
-![Scriptorium Architecture](assets/Modian%20Architecture%20V1.1.0.png)
+![Scriptorium Architecture](assets/Scriptorium%20Architecture%20V1.1.0.png)
 *(Scriptorium V1.0 Clean Architecture)*
 
 Scriptorium decouples the IME into four independent cooperating components:

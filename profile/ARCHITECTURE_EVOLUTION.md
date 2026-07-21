@@ -10,10 +10,10 @@
 
 In the early stage of the project, the primary goal was to validate TSF (Text Services Framework) feasibility — simply **“getting text input working in Notepad.”** The architecture at this point was a classic in-process monolithic DLL.
 
-![Architecture V0.1](assets/Modian%20Architecture%20V0.1.png)
+![Architecture V0.1](assets/Scriptorium%20Architecture%20V0.1.png)
 *(Scriptorium V0.1)*
 
-![Architecture V0.1.1](assets/Modian%20Architecture%20V0.1.1.png)
+![Architecture V0.1.1](assets/Scriptorium%20Architecture%20V0.1.1.png)
 *(Scriptorium V0.1.1)*
 
 ### Key Characteristics
@@ -34,10 +34,10 @@ In the early stage of the project, the primary goal was to validate TSF (Text Se
 
 To improve maintainability, a layered architecture was introduced. The goal was to separate OS-specific complexity from core business logic.
 
-![Architecture V0.1.2](assets/Modian%20Architecture%20V0.1.2.png)
+![Architecture V0.1.2](assets/Scriptorium%20Architecture%20V0.1.2.png)
 *(Scriptorium V0.1.2)*
 
-![Architecture V0.1.3](assets/Modian%20Architecture%20V0.1.3.png)
+![Architecture V0.1.3](assets/Scriptorium%20Architecture%20V0.1.3.png)
 *(Scriptorium V0.1.3)*
 
 ### Key Changes
@@ -58,7 +58,7 @@ As development progressed, layering alone could not solve stability issues. Proc
 
 The architecture evolved from a monolithic DLL into a **Client–Server model**.
 
-![Architecture V1.0 IPC](assets/Modian%20Architecture%20V1.0%20Draft.png)
+![Architecture V1.0 IPC](assets/Scriptorium%20Architecture%20V1.0%20Draft.png)
 *(Scriptorium V1.0 Draft)*
 
 ### Key Changes
@@ -85,8 +85,11 @@ Heavy dictionary loading and processing moved off UI thread.
 
 After establishing the multi-process model, dependencies were reorganized to follow the **Dependency Rule**.
 
-![Clean Architecture V1.0](assets/Modian%20Architecture%20V1.0.png)
+![Clean Architecture V1.0](assets/Scriptorium%20Architecture%20V1.0.png)
 *(Scriptorium V1.0)*
+
+![Clean Architecture V1.0.1](assets/Scriptorium%20Architecture%20V1.0.1.png)
+*(Scriptorium V1.0.1)*
 
 ### Final Structure
 
@@ -118,7 +121,7 @@ After introducing the multi-process architecture, the IME core logic was moved o
 4. Hard to reuse UI across platforms
 5. Risk of UI and core state inconsistency
 
-![Clean Architecture V1.1.0](assets/Modian%20Architecture%20V1.1.0.png)
+![Clean Architecture V1.1.0](assets/Scriptorium%20Architecture%20V1.1.0.png)
 *(Scriptorium V1.1.0)*
 
 ### Key Changes
