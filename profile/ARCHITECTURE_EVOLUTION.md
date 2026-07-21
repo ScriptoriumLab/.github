@@ -174,3 +174,6 @@ From **V0.1** to **V1.0**, Scriptorium demonstrates a key principle:
 > Good architecture evolves; it is not designed upfront.
 
 The IPC architecture was introduced only when complexity and stability requirements justified it. This allowed rapid early development while enabling long-term robustness.
+
+---
+*Copyright © 2026 ScriptoriumLab.*
